@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+  integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+  crossorigin="anonymous"></script>
+  <style>
+        #panel {
+            background-color: rgb(107, 252, 155);
+            width: 300px;
+            height: 60px;
+            margin: 30px;
+            padding: 10px;
+
+        }
+        button{
+           margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Notification panel </h2>
+    <div>
+        <button id="open">open panel</button>
+        <button id="close">Close panel</button>
+        <button id="toggle">toggle panel</button>
+        <button id="alert">show alert</button>
+    </div>
+    <div id="panel" class="fw-semibold">
+        <p>This is a notification panel</p>
+    </div>
+    <div id="message">
+        <p>Message Sent Successfully!</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#open").click(function () {
+                $("#panel").slideDown(1000);
+            });
+
+            $("#close").click(function () {
+                $("#panel").slideUp(1000).delay(1000).slideUp;
+            });
+
+            $("toggle").click(function () {
+                $("#panel"), show(1000);
+            });
+
+            $("toggle").click(function () {
+                $("#panel"), Hide(1000);
+            });
+
+            $("alert").click(function () {
+                $("#message").fadeIn(1000).delay(1000).fadeOut(1000);
+            })
+        })
+    </script>
+</body>
+
+</html>
