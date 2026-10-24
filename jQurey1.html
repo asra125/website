@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.js"
+  integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+  crossorigin="anonymous"></script>
+    <style>
+body{
+font-size: medium;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#lights{
+background-color: rgb(236, 156, 156);
+color: brown;
+}
+    </style>
+</head>
+<body>
+    
+    <h1> jQuery Methods Example</h1>
+
+    <p id="message" >Welcome to the jQuery Class</p>
+
+    <button id="text">Change text</button>
+    <button id="html">Change text tag</button>
+    <button id="toggle">Toggle</button>
+    <button id="addclass">Add Class</button>
+    <button id="removeclass">Remove Class </button>
+    <button id="css">CSS Add</button>
+
+
+    <script>
+        $(document).ready(function(){
+
+            $("#message").click(function(){
+
+                 $("#text").text("#lights")
+                    
+            });
+
+             $("#message").click(function(){
+
+                 $("#html").html("#lights")
+                    
+            });
+        });
+    </script>
+</body>
+</html>
